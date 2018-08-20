@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*var http = require('http');
 
@@ -29,3 +30,22 @@ app.get('/contato', function(req,res){
 app.listen(3000, function(){
 	console.log('Servidor iniciado com sucesso !!!');
 });
+=======
+//Importando http 
+var http = require('http');
+
+//Criando o servidor
+/* 
+ * req = requisição
+ * res = resposta
+*/
+var server = http.createServer(function(req, res){
+    //Recuperando a url digitada
+    var pagina = req.url;
+    res.end(pagina);
+    console.log(pagina);
+});
+
+//Rodando o servidor
+server.listen(3000);
+>>>>>>> 03a0e2c74747e336528fd1f1ef65cb2c6142ebef
