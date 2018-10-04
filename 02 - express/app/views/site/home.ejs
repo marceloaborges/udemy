@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index projeto express com ejs</title>
+</head>
+<body>
+    <h1>Index projeto express e ejs !</h1>
+    
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur non, modi corrupti hic dolor fugiat id molestias ea neque voluptatibus impedit omnis necessitatibus, nihil magnam incidunt facilis quae labore harum?
+    </p>
+
+    <!-- criando um variável usando javascript -->
+    <% var texto = "Trabalhando com express, ejs e javascript !"; %>
+
+    <p>
+        <!-- Inserindo javascript dentro da tag -->
+        <%= texto %>
+    </p>
+
+    <h2>Recebendo a lista de clientes</h2>
+    
+    <ul>
+        <% for(var registro in clientes){ %>
+            <li><%= clientes[registro].nome  %> - <%= clientes[registro].email %></li>
+        <%}%>
+    </ul>
+    
+</body>
+</html>
